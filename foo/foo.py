@@ -5,7 +5,7 @@ from django.conf import settings
 DEBUG = os.environ.get("DEBUG", "on") == "on"
 
 # The default random would invalidate sessions each time the server is restarted
-SECRET_KEY = os.environ.get("SECRET_KEY", os.urandom(32))
+SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # Split allows for multiple values localhost,hello.com
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
